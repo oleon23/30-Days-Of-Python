@@ -63,6 +63,7 @@ print(type(
 
 #function for euclidean distance
 def euclidean_distance(p, q):
+    #zip pairs the elements of p and q together ie. point1 = (1,3) and point2 = (4,6) will be zipped as [(1,4),(3,6)]
     squared_diff = [(q_i - p_i) ** 2 for p_i, q_i in zip(p,q)]
     sum_squared_diff = sum(squared_diff)
     return math.sqrt(sum_squared_diff)
@@ -70,3 +71,11 @@ def euclidean_distance(p, q):
 point1 = (1,3)
 point2 = (4,6)
 print(euclidean_distance(point1, point2))
+
+point3 = (2,3)
+point4 = (10,8)
+print(euclidean_distance(point3, point4))
+
+point5 = (1,2,3)
+point6 = (4,5,6)
+print(euclidean_distance(point5, point6))
